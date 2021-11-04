@@ -1,9 +1,10 @@
 import React from 'react';
+import HomeServices from '../HomeServices/HomeServices';
 
 const Home = () => {
     return (
         <div>
-            this is home
+            <HomeServices></HomeServices>
         </div>
     );
 };

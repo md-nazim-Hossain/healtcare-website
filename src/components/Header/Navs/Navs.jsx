@@ -7,16 +7,15 @@ import './Navs.css';
 
 const Navs = () => {
     const {user,signOutClick} = useAuth();
-    console.log(user)
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky='top'>
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed='top'>
             <Container>
                 <Navbar.Brand href="#home"><img src={logo} alt=""/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
-                        <Nav.Link as={NavLink} to="/service">Service</Nav.Link>
+                        <Nav.Link as={NavLink} to="/home#services">Service</Nav.Link>
                         <Nav.Link as={NavLink} to="/doctors">Doctors</Nav.Link>
                         <Nav.Link as={NavLink} to="/register">Register</Nav.Link>
                         <Nav.Link as={NavLink} to="/contact">Contact Us</Nav.Link>
