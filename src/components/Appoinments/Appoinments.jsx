@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Form, Row,Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Appoinments.css'
 
 const Appoinments = () => {
@@ -23,7 +24,7 @@ const Appoinments = () => {
                    <div>
                        <p className='d-flex justify-content-start align-items-center border-bottom py-4'>
                            <div className='pe-5'>
-                                <i class="fas fa-mobile-alt fs-1 common-color"></i>
+                                <i className="fas fa-mobile-alt fs-1 common-color"></i>
                            </div>
                            <div>
                                <h5>CALL US ANYTIME</h5>
@@ -32,7 +33,7 @@ const Appoinments = () => {
                        </p>
                        <p className='d-flex justify-content-start align-items-center border-bottom py-4'>
                            <div className='pe-5'>
-                                <i class="fas fa-map-marker-alt common-color fs-1"></i>
+                                <i className="fas fa-map-marker-alt common-color fs-1"></i>
                            </div>
                            <div>
                                <h5>VISIT US ANYTIME</h5>
@@ -41,7 +42,7 @@ const Appoinments = () => {
                        </p>
                        <p className='d-flex justify-content-start align-items-center border-bottom py-4'>
                            <div className='pe-5'>
-                                <i class="far fa-heart fs-1 common-color"></i>
+                                <i className="far fa-heart fs-1 common-color"></i>
                            </div>
                            <div>
                                <h5>BOOK AN APPOINTMENT</h5>
@@ -80,6 +81,7 @@ const Appoinments = () => {
                             </Form.Group>
                             <Button className='btn-common rounded-pill common-bg mt-2 btn-hover' variant='transparent'>Book Appointment</Button>
                         </Form>
+                        <Link to='/doctors'><Button variant='dark' className='mt-2 rounded-pill'>Back to Doctors</Button></Link>
                     </div>
                 </Col>
             </Row>

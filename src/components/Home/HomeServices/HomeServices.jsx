@@ -9,7 +9,10 @@ const HomeServices = () => {
     
     return (
         <Container className="py-5" id="services">
-            <h3 className='text-center py-2'>Our <span className="common-color">Services</span></h3>
+            <div className='text-center w-75 py-3 mx-auto'>
+                <h1 className='py-2'>All Our <span className="common-color common-font">Services</span></h1>
+                <p className="text-muted common-font">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs.</p>
+            </div>
             <Row xs={1} sm={2} md={3} className="g-4">
                 {
                     services.map(service => <HomeService

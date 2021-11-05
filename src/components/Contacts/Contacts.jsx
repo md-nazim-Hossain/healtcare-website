@@ -5,7 +5,7 @@ const Contacts = () => {
     return (
         <div style={{backgroundColor:"#d1ccc0"}} className='py-5' id="contact">
             <Container className="p-5 pt-0">
-                <h3 className='text-center pb-5'>Contact <span className='text-danger'>Us</span></h3>
+                <h1 className='text-center pb-5'>Contact <span className='common-color'>Us</span></h1>
                 <Form>
                     <Row xs={1} sm={1} md={2}>
                         <Col>
