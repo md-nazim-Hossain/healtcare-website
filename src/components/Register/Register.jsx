@@ -55,7 +55,7 @@ const Register = () => {
         <Container className='py-5' id='signIn'>
             <h2 className='text-center py-3'>Please <span className='text-danger'>{active ? "Register":"Sign In"}</span></h2>
             <div className='responsive'>
-            {!active && <p className='text-muted text-start ps-2 border-left'> red denotes are required</p>}
+            {active && <p className='text-muted text-start ps-2 border-left'> red denotes are required</p>}
                 {active ?<Form onSubmit = {redirectRegister}>
                     <Form.Group as={Row} className="mb-3" >
                         <Col sm={12}>

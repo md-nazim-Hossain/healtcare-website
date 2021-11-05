@@ -9,7 +9,7 @@ const useFetch = () =>{
             .then(res => res.json())
             .then(data => setServices(data))
         },[]);
-        return [services]
+        return services
     }
 
     return {
