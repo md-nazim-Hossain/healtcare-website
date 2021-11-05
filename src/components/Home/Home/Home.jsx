@@ -1,4 +1,5 @@
 import React from 'react';
+import Contacts from '../../Contacts/Contacts';
 import FindUs from '../FindUs/FindUs';
 import HomeServices from '../HomeServices/HomeServices';
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <HomeServices></HomeServices>
             <FindUs></FindUs>
+            <Contacts></Contacts>
         </div>
     );
 };

@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Doctors from './components/Doctors/Doctors';
 import Footer from './components/Footer/Footer';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import Appoinments from './components/Appoinments/Appoinments';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <PrivateRoute path='/service/:details'>
             <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+          <PrivateRoute path='/appoint'>
+            <Appoinments></Appoinments>
           </PrivateRoute>
           <PrivateRoute path='/doctors'>
             <Doctors></Doctors>

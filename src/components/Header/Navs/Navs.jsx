@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/Medicare-logo.png';
 import { HashLink } from 'react-router-hash-link';
@@ -18,8 +18,9 @@ const Navs = () => {
                         <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#services">Service</Nav.Link>
                         <Nav.Link as={NavLink} to="/doctors">Doctors</Nav.Link>
+                        <Nav.Link as={NavLink} to="/appoint">Appointments</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#find">Find Us</Nav.Link>
-                        <Nav.Link as={NavLink} to="/contact">Contact Us</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#contact">Contacts</Nav.Link>
                     </Nav>
                     <Nav>
                     {user.email && <Nav.Link>
