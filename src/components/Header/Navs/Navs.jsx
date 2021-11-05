@@ -20,7 +20,7 @@ const Navs = () => {
                         <Nav.Link as={NavLink} to="/doctors">Doctors</Nav.Link>
                         <Nav.Link as={NavLink} to="/appoint">Appointments</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#find">Find Us</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#contact">Contacts</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#contact">Contact Us</Nav.Link>
                     </Nav>
                     <Nav>
                     {user.email && <Nav.Link>
