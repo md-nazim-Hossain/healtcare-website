@@ -5,7 +5,7 @@ import HomeService from '../HomeService/HomeService';
 
 const HomeServices = () => {
     const {useService} = useFetch();
-    const services = useService();
+    const [services] = useService();
     
     return (
         <Container className="py-5" id="services">
@@ -20,6 +20,7 @@ const HomeServices = () => {
                         service={service}
                     ></HomeService>)
                 }
+                
             </Row>
         </Container>
     );

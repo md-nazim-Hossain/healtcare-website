@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
-import useFetch from '../../hooks/useFetch';
 
 const ServiceDetails = () => {
-    const {useService} = useFetch();
     const {details} = useParams();
-    const services = useService();
-    console.log(services);
+    
+    useEffect(()=>{
+        fetch('./fakeData.json')
+        .then(res => res.json())
+        .then(data => console.log(data))
+    },[]);
+
     return (
         <div>
             {details}
