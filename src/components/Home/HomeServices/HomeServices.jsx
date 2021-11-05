@@ -6,7 +6,7 @@ import HomeService from '../HomeService/HomeService';
 const HomeServices = () => {
     const {useService} = useFetch();
     const [services] = useService();
-
+    
     return (
         <Container className="py-5" id="services">
             <h3 className='text-center py-2'>Our <span className="common-color">Services</span></h3>

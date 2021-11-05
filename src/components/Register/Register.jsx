@@ -7,8 +7,8 @@ import './Register.css'
 
 const Register = () => {
     const [active,setActive] = useState(false);
-    const {error,signInGoogle,handleName,handlePhone,handleEmail,handlePassword,handleRegister,
-        handleSignIn,handlePasswordReset} = useAuth();
+    const {setUser,setError,error,signInGoogle,handleName,handlePhone,handleEmail,handlePassword,handleRegister,
+        handleSignIn,handlePasswordReset,handleUpdate} = useAuth();
     
     const location = useLocation();
     const redirect_url = location.state?.from || '/home';
@@ -20,6 +20,31 @@ const Register = () => {
             history.push(redirect_url);
         });
     }
+
+    const redirectRegister = e =>{
+        e.preventDefault();
+        handleRegister()
+        .then(result =>{
+            handleUpdate();
+            setUser(result.user);
+            history.push(redirect_url);
+            setError('');
+        }).catch(e =>{
+            setError(e.message);
+        });
+    }
+
+    const redirectSignIn = e =>{
+        e.preventDefault();
+        handleSignIn()
+        .then(result =>{
+            setUser(result.user);
+            history.push(redirect_url)
+            setError('');
+        }).catch(e =>{
+            setError(e.message)
+        })
+    }
     const handleSignUpForm = () =>{
         setActive(true);
     }
@@ -27,11 +52,11 @@ const Register = () => {
         setActive(false);
     }
     return (
-        <Container className='py-5'>
-            <h2 className='text-center py-3'>Please <span className='text-danger'>{!active ? "Register":"Sign In"}</span></h2>
+        <Container className='py-5' id='signIn'>
+            <h2 className='text-center py-3'>Please <span className='text-danger'>{active ? "Register":"Sign In"}</span></h2>
             <div className='responsive'>
             {!active && <p className='text-muted text-start ps-2 border-left'> red denotes are required</p>}
-                {!active ?<Form onSubmit = {handleRegister}>
+                {active ?<Form onSubmit = {redirectRegister}>
                     <Form.Group as={Row} className="mb-3" >
                         <Col sm={12}>
                             <Form.Control onBlur={handleName} type="text" placeholder="Username" required className='border-right'/>
@@ -67,7 +92,7 @@ const Register = () => {
                     </Form.Group>
                 </Form>
                 :
-                <Form onSubmit={handleSignIn}>
+                <Form onSubmit={redirectSignIn}>
                     <Form.Group as={Row} className="mb-3" >
                         <Col sm={12}>
                             <Form.Control onBlur={handleEmail} type="email" placeholder="Email" required />
@@ -92,8 +117,8 @@ const Register = () => {
                 </Form>}
                 {active && <div className='text-center'><Button onClick={handlePasswordReset} variant='link' type="submit" className='text-muted'>forgotten password ?</Button></div>}
                 <div className='text-center'>
-                    {!active ? <Button  onClick={handleSignUpForm} variant='link' type="submit" className='text-muted'>Already have an account ?</Button>:
-                     <Button  onClick={handleSignInForm} variant='link' type="submit" className='text-muted'>Create New User ?</Button>
+                    {active ? <Button  onClick={handleSignInForm} variant='link' type="submit" className='text-muted'>Already have an account ?</Button>:
+                     <Button  onClick={handleSignUpForm} variant='link' type="submit" className='text-muted'>Create New User ?</Button>
                     }
                 </div>
                 {active && <div className='py-3 text-center'>

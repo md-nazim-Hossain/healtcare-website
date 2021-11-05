@@ -66,26 +66,12 @@ const useFirebase = () =>{
         } 
     }
     /// create user with firebase
-    const handleRegister = e =>{
-        e.preventDefault();
-        createUserWithEmailAndPassword(auth,email,password)
-        .then(result =>{
-            handleUpdate();
-            setError('');
-            console.log(result.user);
-        }).catch(e =>{
-            setError(e.message);
-        });
+    const handleRegister = () =>{
+       return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const handleSignIn = () =>{
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result =>{
-            setUser(result.user)
-            setError('')
-        }).catch(e =>{
-            setError(e.message)
-        })
+        return signInWithEmailAndPassword(auth, email, password)
     }
 
     const handleUpdate =  () =>{
@@ -109,8 +95,11 @@ const useFirebase = () =>{
     return {
         user,
         error,
+        setUser,
+        setError,
         signInGoogle,
         signOutClick,
+        handleUpdate,
         handleName,
         handlePhone,
         handleEmail,
