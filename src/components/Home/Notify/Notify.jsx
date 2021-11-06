@@ -13,12 +13,12 @@ const Notify = () => {
                         <p className='text-muted fs-4'>Sign up for Medicare newsletter to receive all the new offers and discounts from Medicare clinic. Discounts are only valid four our newsletter subscribers.</p>
                     </div>
                     <Form>
-                        <Row xs={1} md={2}>
-                            <Col xs={8} md={8}>
+                        <Row xs={1} sm={1} md={2}>
+                            <Col md={8}>
                                 <Form.Control type="email" placeholder="Type in your email address" required className='input-bg p-2 ps-4 rounded-pill mt-2'/>
                             </Col>
-                            <Col xs={4} md={4}>
-                                <Button className='btn-common rounded-pill common-bg mt-2 btn-hover' variant='transparent'>Subscriber</Button>
+                            <Col md={4}>
+                                <Button className='btn-common rounded-pill common-bg mt-2 me-2 btn-hover' variant='transparent'>Subscriber</Button>
                             </Col>
                         </Row>
                     </Form>

@@ -8,10 +8,12 @@ const Appoinments = () => {
         <Container>
             <Row md={1}>
                 <Col>
-                    <div>
-                        <p className='py-5'> <span className='header-super-title pb-4'>GET THE RIGHT MEDICAL CARE</span></p>
-                        <p className='title'>Book With <span className='header-title common-color common-font'>your doctor </span></p>
-                        <p className='text-muted w-50 fs-5'>Some up and coming trends are healthcare consolidation for independent healthcare centers that see a cut in unforeseen payouts.</p>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <div>
+                            <p className='py-5'> <span className='header-super-title pb-4'>GET THE RIGHT MEDICAL CARE</span></p>
+                            <p className='title'>Book With <span className='header-title common-color common-font'>your doctor </span></p>
+                            <p className='text-muted w-50 fs-5'>Some up and coming trends are healthcare consolidation for independent healthcare centers that see a cut in unforeseen payouts.</p>
+                        </div>
                     </div>
                 </Col>
             </Row>

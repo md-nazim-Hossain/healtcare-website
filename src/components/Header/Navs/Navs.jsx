@@ -3,7 +3,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/Medicare-logo.png';
-import { HashLink } from 'react-router-hash-link';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 import './Navs.css';
 
 const Navs = () => {
@@ -15,12 +15,12 @@ const Navs = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#services">Service</Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#home">Home</Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#services">Service</Nav.Link>
                         <Nav.Link as={NavLink} to="/doctors">Doctors</Nav.Link>
                         <Nav.Link as={NavLink} to="/appoint">Appointments</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#find">Find Us</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#contact">Contact Us</Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#find">Find Us</Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#contact">Contact Us</Nav.Link>
                     </Nav>
                     <Nav>
                     {user.email && <Nav.Link>

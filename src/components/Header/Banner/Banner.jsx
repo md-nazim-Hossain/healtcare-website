@@ -16,7 +16,7 @@ const Banner = () => {
                                 <h1 className='header-sub-title'>healthy family</h1>
                                 <p className='text-muted common-font py-3'>Globally harness multimedia based collaboration and idea-sharing with backend products. Continually whiteboard superior opportunities via covalent scenarios.</p>
                                 <Button className='btn-common rounded-pill common-bg mt-2 btn-hover' variant='transparent me-5'>Discover More</Button>
-                                <HashLink to='/home#service'>
+                                <HashLink to='/home#services'>
                                     <Button variant='dark' className='btn-common rounded-pill mt-2'>View Our Service</Button>
                                 </HashLink>
                             </div>
