@@ -25,8 +25,8 @@ const ServiceDetails = () => {
 
     const {img,price,name,description,detailsInfo} = detail;
     return (
-        <Container className='w-50 mx-auto py-5'>
-            <Row >
+        <Container className='py-5'>
+            <Row>
                 <Col>
                     <Card className="h-100 text-center">
                         <Card.Img variant="top" src={img} />
